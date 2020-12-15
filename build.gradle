@@ -60,6 +60,13 @@ bakePreview {
     port = '8052'
 }
 
+task copyImages(type: Copy) {
+    from('src/doc/images') {}
+    into('build/jbake/images')
+}
+
+bake.dependsOn copyImages
+
 task buildAndPreview(
         dependsOn: [bake, bakePreview],
         group: 'documentation'
