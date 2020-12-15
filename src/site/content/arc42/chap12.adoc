@@ -1,0 +1,6 @@
+:jbake-title: Glossar
+:jbake-type: page_toc
+:jbake-status: published
+
+include::../../../doc/chapters/12_glossary.adoc[leveloffset=-1]
+

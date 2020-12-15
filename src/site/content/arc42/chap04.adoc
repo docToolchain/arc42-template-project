@@ -1,0 +1,5 @@
+:jbake-title: Lösungsstrategie
+:jbake-type: page_toc
+:jbake-status: published
+
+include::../../../doc/chapters/04_solution_strategy.adoc[leveloffset=-1]

@@ -1,0 +1,5 @@
+:jbake-title: Kontextabgrenzung
+:jbake-type: page_toc
+:jbake-status: published
+
+include::../../../doc/chapters/03_system_scope_and_context.adoc[leveloffset=-1]

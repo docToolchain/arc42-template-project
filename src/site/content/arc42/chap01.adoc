@@ -1,0 +1,5 @@
+:jbake-title: Einführung und Ziele
+:jbake-type: page_toc
+:jbake-status: published
+
+include::../../../doc/chapters/01_introduction_and_goals.adoc[leveloffset=-1]

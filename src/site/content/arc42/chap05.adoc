@@ -1,0 +1,5 @@
+:jbake-title: Bausteinsicht
+:jbake-type: page_toc
+:jbake-status: published
+
+include::../../../doc/chapters/05_building_block_view.adoc[leveloffset=-1]

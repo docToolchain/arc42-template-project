@@ -1,0 +1,5 @@
+:jbake-title: Laufzeitsicht
+:jbake-type: page_toc
+:jbake-status: published
+
+include::../../../doc/chapters/06_runtime_view.adoc[leveloffset=-1]

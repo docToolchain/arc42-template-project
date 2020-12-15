@@ -1,0 +1,5 @@
+:jbake-title: Verteilungssicht
+:jbake-type: page_toc
+:jbake-status: published
+
+include::../../../doc/chapters/07_deployment_view.adoc[leveloffset=-1]

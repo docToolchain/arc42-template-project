@@ -1,0 +1,25 @@
+== Tech-Stack
+
+[cols="2"]
+|===
+| Gradle
+| 6.7.1
+
+| Groovy
+| 2.5.12
+
+| JVM
+| 15.0.1 (Oracle Corporation 15.0.1+9-18)
+
+| OS
+| Linux 4.19.104-microsoft-standard amd64
+
+| jBake
+| 2.6.5
+
+| twitter-bootstrap
+| 5.0.0-beta
+
+| arc42
+| 7.0DE
+|===
