@@ -53,11 +53,11 @@ jbake {
     configuration['asciidoctor.attributes'] = [
             'source-highlighter=prettify',
             'imagesDir=/images',
-            "imagesoutDir=${buildDir}/site/images"
+            "imagesoutDir=${buildDir}/jbake/images"
     ]
 }
 bakePreview {
-    port = '8052'
+    port = '8044'
 }
 
 task copyImages(type: Copy) {
