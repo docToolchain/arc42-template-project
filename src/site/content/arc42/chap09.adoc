@@ -2,4 +2,6 @@
 :jbake-type: page_toc
 :jbake-status: published
 
+:toc: left
+
 include::../../../doc/chapters/09_design_decisions.adoc[leveloffset=-1]

@@ -1,18 +1,25 @@
-== Tech-Stack
+//tag::about[]
+
+== arc42 Project Template
+
+This is a template for a Java/arc42 documentation project.
+
+A demo for the deployed microsite of the documentation template can be found at https://arc42-demo.netlify.app/
+
+=== Tech-Stack
+
+This repository was build was with/uses the following technology stack.
+
+Groovy is only optional for demonstration purpose.
+It show how to mix a Hello-World app with documentation in one Repository.
 
 [cols="2"]
 |===
 | Gradle
 | 6.7.1
 
-| Groovy
-| 2.5.12
-
 | JVM
 | 15.0.1 (Oracle Corporation 15.0.1+9-18)
-
-| OS
-| Linux 4.19.104-microsoft-standard amd64
 
 | jBake
 | 2.6.5
@@ -22,4 +29,13 @@
 
 | arc42
 | 7.0DE
+
+| Groovy
+| 2.5.12
 |===
+
+//end::about[]
+
+=== How to build
+
+use `./gradlew bake` to build the site and `./gradlew bakePreview` to start a little webserver.

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="de">
 <%include "header.gsp"%>
-<body onload="prettyPrint()" class="d-flex flex-column h-100">
+<body onload="prettyPrint()" class="d-flex flex-column h-100 toc">
 
 <%include "menu.gsp"%>
 
