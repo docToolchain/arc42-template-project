@@ -12,7 +12,6 @@
         <p class="lead">
         <a href="${post.uri}"><h3>${post.title}</h3></a>
         <p>${new java.text.SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH).format(post.date)}</p>
-        <p>${post.body}</p>
         </p>
         <%}%>
 
