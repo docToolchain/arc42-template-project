@@ -6,25 +6,82 @@
 
 == Mission Statement
 
-Lorem Ipsum
+> Die Corona-Warn-App ist eine App, die hilft, Infektionsketten des SARS-CoV-2 (COVID-19-Auslöser) in Deutschland nachzuverfolgen und zu unterbrechen. Die App basiert auf Technologien mit einem dezentralisierten Ansatz und informiert Personen, wenn sie mit einer infizierten Person in Kontakt standen. Transparenz ist von entscheidender Bedeutung, um die Bevölkerung zu schützen und die Akzeptanz zu erhöhen.
 
 == Randbedingungen
 
+[%header,cols=2*] 
 |===
-| sdfkhj | sdfkjhsdf
+| Technologisch | Organisatorisch
 
+| Betrieb in der Cloud
+| Große Medienaufmerksamkeit, gewisse Skepsis am Mehrwert innerhalb der Bevölkerung
+
+| Native mobile Clients
+| Konsortium aus zwei Auftragnehmern (SAP und Deutsche Telekom)
+
+| Einsatz der Exposure Notification Framework
+| Enger Zeitrahmen
+
+| 
+| Hoher politischer Druck, viele Parteien involviert (Ministerien, Behörden, RKI)
+
+| Hohe Datenschutzanforderungen
 |===
+
+== Architekturziele
+
+[%header,cols=2*] 
+|===
+| Ziel | Beschreibung
+
+| Sicherheit
+| Der Schutz der personenbezogenen Daten hat oberste Priorität, vertrauliche Daten werden dezentral gespeichert.
+
+| Zuverlässigkeit
+| Die Anwendung ist jederzeit verfügbar und sie funktioniert auch bei Lastspitzen oder Angriffen auf die Server-Infrastruktur.
+
+| Effizienz
+| Dutzende von Millionen Benutzer können die Anwendung einsetzen.
+
+| Benutzbarkeit
+| Die Endanwendung ist intuitiv bedienbar und wird von den Anwendern akzeptiert.
+
+| Betreibbarkeit
+| Die Installation der Endanwendung kann auch von Laien durchgeführt werden.
+|===
+ 
+
 
 == Kontextsicht
 
+=== PlantUML
+
+.Kontextüberblick CWA Server
 [plantuml]
 ----
-component [corona-app] as app
-actor user
-user -> app
-app -> [server]
+component [Corona-App-Server] as server
+component Vault
+component CDN
+component "Labor Informationssystem" as labor
+component "Ausländische CWA Infrastruktur" as ausland
+actor "App User" as user
+actor "Arzt/Mitarbeiter Test-Center" as arzt
+actor "Mitarbeiter Gesundheitsamt" as gesundheitsamt
+actor "Mitarbeiter Hotline" as hotline
 
+user -> server
+arzt -> server
+gesundheitsamt -> server
+hotline -> server
+
+Vault -> server
+CDN -> server
+labor -> server
+ausland -> server
 ----
 
-image::context2.drawio.svg[]
+=== Draw.io
 
+.Beispiel in draw.io
+image::context2.drawio.svg[]
