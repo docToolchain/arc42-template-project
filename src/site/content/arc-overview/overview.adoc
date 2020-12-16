@@ -60,6 +60,7 @@
 .Kontextüberblick CWA Server
 [plantuml]
 ----
+!pragma graphviz_dot jdot
 component [Corona-App-Server] as server
 component Vault
 component CDN
