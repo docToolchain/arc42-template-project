@@ -96,6 +96,7 @@ Public Cloud Infrastruktur für die Server
 .Kontextüberblick CWA Server
 [plantuml]
 ----
+!pragma graphviz_dot jdot
 skinparam componentStyle uml2
 
 component [Corona-App-Server] as server
