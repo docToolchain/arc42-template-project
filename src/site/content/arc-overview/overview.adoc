@@ -52,6 +52,42 @@
 |===
  
 
+== Lösungsansätze
+
+[options="header",cols="1,2"]
+|===
+| Ziel | Passende Lösungsansätze
+
+| Sicherheit
+| Speicherung der Daten lokal 
+
+Verschlüsselung aller Bewegungsdaten 
+
+Senden der Daten nur nach Aufforderung
+
+| Zuverlässigkeit
+| Microservices
+
+Docker, Kubernetes, Public Cloud
+
+| Effizienz
+| Dezentraler Ansatz
+
+Mobile Apps
+
+Wenig Datenverkehr
+
+| Benutzbarkeit
+| Transparenz in der Entwicklung, Verwendung von Opensource
+
+Sehr einfache Bedienführung
+
+| Betreibbarkeit
+| Apps über den App-Store
+
+Public Cloud Infrastruktur für die Server
+|===
+
 
 == Kontextsicht
 
@@ -60,7 +96,12 @@
 .Kontextüberblick CWA Server
 [plantuml]
 ----
+<<<<<<< HEAD
 !pragma graphviz_dot jdot
+=======
+skinparam componentStyle uml2
+
+>>>>>>> 9e3d271 (Lösungsansätze)
 component [Corona-App-Server] as server
 component Vault
 component CDN
