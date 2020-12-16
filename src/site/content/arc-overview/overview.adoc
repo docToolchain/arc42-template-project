@@ -1,0 +1,30 @@
+:jbake-title: Architektur-Übersicht
+:jbake-type: page_toc
+:jbake-status: published
+
+:toc: left
+
+== Mission Statement
+
+Lorem Ipsum
+
+== Randbedingungen
+
+|===
+| sdfkhj | sdfkjhsdf
+
+|===
+
+== Kontextsicht
+
+[plantuml]
+----
+component [corona-app] as app
+actor user
+user -> app
+app -> [server]
+
+----
+
+image::context2.drawio.svg[]
+

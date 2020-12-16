@@ -57,11 +57,12 @@ jbake {
     ]
 }
 bakePreview {
-    port = '8044'
+    port = '8047'
 }
 
 task copyImages(type: Copy) {
     from('src/doc/images') {}
+    from('src/site/content/arc-overview') {}
     into('build/jbake/images')
 }
 
