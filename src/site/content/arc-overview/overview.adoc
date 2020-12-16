@@ -10,7 +10,7 @@
 
 == Randbedingungen
 
-[%header,cols=2*] 
+[options="header",cols="1,2"]
 |===
 | Technologisch | Organisatorisch
 
@@ -31,7 +31,7 @@
 
 == Architekturziele
 
-[%header,cols=2*] 
+[options="header",cols="1,2"]
 |===
 | Ziel | Beschreibung
 
@@ -63,25 +63,30 @@
 component [Corona-App-Server] as server
 component Vault
 component CDN
-component "Labor Informationssystem" as labor
-component "Ausländische CWA Infrastruktur" as ausland
+component "Labor\nInformationssystem" as labor
+component "Ausländische\nCWA Infrastruktur" as ausland
 actor "App User" as user
 actor "Arzt/Mitarbeiter Test-Center" as arzt
 actor "Mitarbeiter Gesundheitsamt" as gesundheitsamt
 actor "Mitarbeiter Hotline" as hotline
 
-user -> server
-arzt -> server
-gesundheitsamt -> server
-hotline -> server
+user -down- server
+arzt -down- server
+gesundheitsamt -down- server
+hotline -down- server
 
-Vault -> server
-CDN -> server
-labor -> server
-ausland -> server
+Vault -up- server
+CDN -up- server
+labor -up- server
+ausland -up- server
 ----
 
 === Draw.io
 
 .Beispiel in draw.io
 image::context2.drawio.svg[]
+
+=== PowerPoint
+
+.Beispiel als exportiertes Image
+image::context.png[]

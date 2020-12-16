@@ -48,3 +48,5 @@ use `./gradlew bake` to build the site and `./gradlew bakePreview` to start a li
 sdk install jbake
 jbake src/site build/jbake -b -s
 ----
+
+TIP: jBake as CLI tool will not render plantUML diagrams.
