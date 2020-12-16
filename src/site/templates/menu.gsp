@@ -7,8 +7,8 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav me-auto mb-2 mb-md-0">
         <li><a class="nav-link" href="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>index.html">Home</a></li>
-        <li class="nav-item dropdown">
         <li><a class="nav-link" href="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>arc-overview/overview.html">Arc-Overview</a></li>
+        <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">arc42</a>
           <ul class="dropdown-menu" aria-labelledby="dropdown01">
             <li><a class="dropdown-item" href="<%if (content.rootpath) {%>${content.rootpath}<% } else { %><% }%>arc42/chap01.html">01 Einführung und Ziele</a></li>
