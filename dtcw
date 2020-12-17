@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-mainConfigFile=config.groovy
+mainConfigFile=Config.groovy
 
 # check if CLI, docker or sdkman are installed
 cli=false
@@ -35,15 +35,15 @@ fi
 if [ "$cli" = true ] ; then
     command="doctoolchain . $1 $2 $3 $4 $5 $6 $7 $8 $9 "
 else
-    if [ "$docker" = true ] ; then
-        docker_cmd=$(which docker)
-        echo $docker_cmd
-        command="$docker_cmd run --rm -it --entrypoint /bin/bash -v ${PWD}:/project rdmueller/doctoolchain:rc-1.2.0 -c \"doctoolchain . $1 $2 $3 $4 $5 $6 $7 $8 $9 && exit\""
-        echo $command
+    if [ "$homefolder" = true ] ; then
+      command="$HOME/.doctoolchain/docToolchain-1.2.0/bin/doctoolchain . $1 $2 $3 $4 $5 $6 $7 $8 $9 "
     else
-        if [ "$homefolder" = true ] ; then
-          command="$HOME/.doctoolchain/docToolchain-1.2.0/bin/doctoolchain . $1 $2 $3 $4 $5 $6 $7 $8 $9 "        
-        else
+      if [ "$docker" = true ] ; then
+          docker_cmd=$(which docker)
+          echo $docker_cmd
+          command="$docker_cmd run --rm -it --entrypoint /bin/bash -v ${PWD}:/project rdmueller/doctoolchain:rc-1.2.0 -c \"doctoolchain . $1 $2 $3 $4 $5 $6 $7 $8 $9 && exit\""
+          echo $command
+      else
 
           echo "docToolchain not installed."
           if [ "$sdkman" = true ] ; then
@@ -51,17 +51,27 @@ else
               echo "$ sdk install doctoolchain 1.2.0-beta"
               exit
           else
-	      echo "installing doctoolchain to $HOME/.doctoolchain"
-              mkdir $HOME/.doctoolchain
-	      wget https://github.com/docToolchain/docToolchain/archive/v1.2.0.zip -O $HOME/.doctoolchain/source.zip
-              unzip $HOME/.doctoolchain/source.zip -d $HOME/.doctoolchain/.  
-              command="$HOME/.doctoolchain/docToolchain-1.2.0/bin/doctoolchain . $1 $2 $3 $4 $5 $6 $7 $8 $9 "
-              #echo "you need docToolchain as CLI-Tool installed or docker."
-              #echo "to install docToolchain as CLI-Tool, please install"
-              #echo "sdkman and re-run this command."
-              #echo "https://sdkman.io/install"
-              #echo "$ curl -s "https://get.sdkman.io" | bash"
-              #exit
+              echo "doctoolchain not found"
+              echo "Do you wish to install doctoolchain to $HOME/.doctoolchain?"
+              select yn in "Yes" "No"; do
+                case $yn in
+                  Yes ) echo "installing doctoolchain";
+                        mkdir $HOME/.doctoolchain
+                        wget https://github.com/docToolchain/docToolchain/archive/v1.2.0.zip -O $HOME/.doctoolchain/source.zip
+                        unzip $HOME/.doctoolchain/source.zip -d $HOME/.doctoolchain/.
+                        command="$HOME/.doctoolchain/docToolchain-1.2.0/bin/doctoolchain . $1 $2 $3 $4 $5 $6 $7 $8 $9 "
+                        break
+                    ;;
+                  No )
+                        echo "you need docToolchain as CLI-Tool installed or docker."
+                        echo "to install docToolchain as CLI-Tool, please install"
+                        echo "sdkman and re-run this command."
+                        echo "https://sdkman.io/install"
+                        echo "$ curl -s "https://get.sdkman.io" | bash"
+                        exit 1
+                    ;;
+                esac
+              done
           fi
        fi
     fi
