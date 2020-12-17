@@ -10,6 +10,8 @@
 
 == Randbedingungen
 
+Rahmenbedingungen sind Vorgaben, die unsere Lösung einschränken und Optionen ausschließen. Man unterscheidet in technologische und organisatorische Rahmenbedingungen.
+
 [options="header",cols="1,2"]
 |===
 | Technologisch | Organisatorisch
@@ -30,6 +32,9 @@
 |===
 
 == Architekturziele
+
+Die Architekturziele sind die wichtigsten geforderten Qualitätsmerkmale für ein Softwaresystem.
+Typischerweise werden im Rahmen eines Architekturüberblicks die Top-3 bis Top-5 genannt.
 
 [options="header",cols="1,2"]
 |===
@@ -53,6 +58,8 @@
  
 
 == Lösungsansätze
+
+Den Architektur-/Qualitätszielen werden mit zugeordneten high-level Lösungsansätze in Beziehung zueinander dargestellt.
 
 [options="header",cols="1,2"]
 |===
@@ -90,6 +97,8 @@ Public Cloud Infrastruktur für die Server
 
 
 == Kontextsicht
+
+Das ist eine Abgrenzung des Systems und Visualisierung der Benutzer und Fremdsysteme, mit denen es interagiert. Typischerweise wird es durch eine Grafik abgebildet, ergänzt um kurze Beschreibungen. Das System selbst ist dabei eine Blackbox.
 
 === PlantUML
 
