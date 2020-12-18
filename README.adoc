@@ -7,7 +7,7 @@ This is a template for a Java/arc42 documentation project.
 A demo for the deployed microsite of the documentation template can be found at https://arc42-demo.netlify.app/
 
 .Sketchnotes by https://twitter.com/Teapot4181[Teapot-418] https://www.sketchnotes.tech/
-image::https://pbs.twimg.com/media/EpdEPDRXUAAIrqZ?format=png
+image::https://pbs.twimg.com/media/EpdEPDRXUAAIrqZ?format=png[]
 
 === Tech-Stack
 
